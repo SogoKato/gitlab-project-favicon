@@ -1,6 +1,7 @@
 function saveOptions(e) {
   e.preventDefault();
   const enabledGitLabSites = document.querySelector("#enabledGitLabSites").value.replace("\n", ",");
+  const browser = window.browser ? window.browser : window.chrome;
   browser.storage.sync.set({
     enabledGitLabSites: enabledGitLabSites,
   });
@@ -18,8 +19,12 @@ function restoreOptions() {
     console.log(`Error: ${error}`);
   }
 
-  const getting = browser.storage.sync.get("enabledGitLabSites");
-  getting.then(setCurrentChoice, onError);
+  if (window.browser) {
+    const getting = browser.storage.sync.get("enabledGitLabSites");
+    getting.then(setCurrentChoice, onError);
+  } else {
+    chrome.storage.sync.get(["enabledGitLabSites"], setCurrentChoice);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);

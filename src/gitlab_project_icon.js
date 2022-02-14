@@ -21,6 +21,16 @@
         favicon.href = img.src;
     };
 
-    const getting = browser.storage.sync.get("enabledGitLabSites");
-    getting.then(getHostnames, onError).then(changeFaviconToProjectLogoIfEnabled, () => { });
+    if (window.browser) {
+        const getting = browser.storage.sync.get("enabledGitLabSites");
+        getting.then(getHostnames, onError).then(changeFaviconToProjectLogoIfEnabled, () => { });
+    } else {
+        chrome.storage.sync.get(["enabledGitLabSites"], (result) => {
+            try {
+                changeFaviconToProjectLogoIfEnabled(getHostnames(result));
+            } catch {
+                return;
+            }
+        });
+    }
 })();

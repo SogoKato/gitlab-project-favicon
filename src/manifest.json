@@ -4,7 +4,8 @@
   "version": "1.0",
   "description": "Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.",
   "icons": {
-    "64": "icons/gitlab-project-favicon-64.png"
+    "64": "icons/gitlab-project-favicon-64.png",
+    "128": "icons/gitlab-project-favicon-128.png"
   },
   "content_scripts": [
     {
