@@ -1,2 +1,7 @@
 # gitlab-project-favicon
-Make GitLab favicon project logo to distinguish many gl tabs.
+
+Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.
+
+## Acknowledgements
+
+Raccoon icon that this project use is created by justicon - [Flaticon](https://www.flaticon.com/free-icons/raccoon).
