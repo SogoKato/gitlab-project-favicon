@@ -2,18 +2,20 @@ function saveOptions(e) {
   e.preventDefault();
   const enabledGitLabSites = document.querySelector("#enabledGitLabSites").value.replace("\n", ",");
   browser.storage.sync.set({
-    enabledGitLabSites: enabledGitLabSites,
+      enabledGitLabSites: enabledGitLabSites,
   });
+  document.getElementById("saveBtn").innerText = "Saved!"
+  setTimeout(() => { document.getElementById("saveBtn").innerText = "Save" }, 3000);
 }
 
 function restoreOptions() {
 
   function setCurrentChoice(result) {
-    document.querySelector("#enabledGitLabSites").value = result.enabledGitLabSites.replace(",", "\n");
+      document.querySelector("#enabledGitLabSites").value = result.enabledGitLabSites.replace(",", "\n");
   }
 
   function onError(error) {
-    console.log(`Error: ${error}`);
+      console.log(`Error: ${error}`);
   }
 
   const getting = browser.storage.sync.get("enabledGitLabSites");
