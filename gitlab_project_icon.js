@@ -22,5 +22,5 @@
     };
 
     const getting = browser.storage.sync.get("enabledGitLabSites");
-    getting.then(getHostnames, onError).then(changeFaviconToProjectLogoIfEnabled, () => {});
+    getting.then(getHostnames, onError).then(changeFaviconToProjectLogoIfEnabled, () => { });
 })();

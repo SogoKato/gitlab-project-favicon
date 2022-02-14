@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+</head>
 
-    <style>
-      .option{
-        margin: 20px 0;
-      }
-      .option__ttl{
-        font-size: large;
-        font-weight: bold;
-      }
-      .option__textarea{
-        width: 100%;
-      }
-      .button{
-        background: #fca326;
-        border: none;
-        border-radius: 10px;
-        color: #fff;
-        font-size: medium;
-        padding: 8px 15px;
-        text-align: center;
-        width: 5em;
-      }
-      .button:hover{
-        background: #fc6d27;
-      }
-    </style>
+<body>
 
-    <form>
-      <div>
-        <div class="option">
-          <label>
-            <p class="option__ttl">Enabled GitLab Sites</p>
-            <p>Please fill GitLab site's hostname to text area below. Delimit with newline or comma to specify multiple hostnames.</p>
-            <textarea id="enabledGitLabSites" class="option__textarea" placeholder="gitlab.com&#13;gitlab.example.com"></textarea>
-          </label>
-          <small>No schema (http:// or https://) or path following hostname needed.</small>
-        </div>
+  <style>
+    .option {
+      margin: 20px 0;
+    }
+
+    .option__ttl {
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .option__textarea {
+      width: 100%;
+    }
+
+    .button {
+      background: #fca326;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: medium;
+      padding: 8px 15px;
+      text-align: center;
+      width: 5em;
+    }
+
+    .button:hover {
+      background: #fc6d27;
+    }
+  </style>
+
+  <form>
+    <div>
+      <div class="option">
+        <label>
+          <p class="option__ttl">Enabled GitLab Sites</p>
+          <p>Please fill GitLab site's hostname to text area below. Delimit with newline or comma to specify multiple
+            hostnames.</p>
+          <textarea id="enabledGitLabSites" class="option__textarea"
+            placeholder="gitlab.com&#13;gitlab.example.com"></textarea>
+        </label>
+        <small>No schema (http:// or https://) or path following hostname needed.</small>
       </div>
-      <button id="saveBtn" class="button" type="submit">Save</button>
-    </form>
+    </div>
+    <button id="saveBtn" class="button" type="submit">Save</button>
+  </form>
 
-    <script src="options.js"></script>
+  <script src="options.js"></script>
 
-  </body>
+</body>
 
 </html>
