@@ -1,25 +1,24 @@
 {
-    "manifest_version": 2,
-    "name": "GitLab-Project-Favicon",
-    "version": "1.0",
-  
-    "description": "Make GitLab favicon project logo to distinguish many gl tabs.",
-  
-    "icons": {
-      "48": "icons/gitlab-project-favicon-48.png"
-    },
+  "manifest_version": 2,
+  "name": "GitLab-Project-Favicon",
+  "version": "1.0",
 
-    "content_scripts": [
-      {
-        "matches": ["*://*/*"],
-        "js": ["gitlab_project_icon.js"]
-      }
-    ],
+  "description": "Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.",
 
-    "options_ui": {
-      "page": "options.html"
-    },
-    
-    "permissions": ["storage"]
-  }
+  "icons": {
+    "64": "icons/gitlab-project-favicon-64.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["gitlab_project_icon.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "settings/options.html"
+  },
   
+  "permissions": ["storage"]
+}

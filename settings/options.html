@@ -7,9 +7,42 @@
 
   <body>
 
+    <style>
+      .option{
+        margin: 20px 0;
+      }
+      .option__ttl{
+        font-size: large;
+        font-weight: bold;
+      }
+      .option__textarea{
+        width: 100%;
+      }
+      .button{
+        background: #fca326;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-size: medium;
+        padding: 8px 15px;
+      }
+      .button:hover{
+        background: #fc6d27;
+      }
+    </style>
+
     <form>
-        <label>Enabled GitLab Sites<textarea id="enabledGitLabSites"></label>
-        <button type="submit">Save</button>
+      <div>
+        <div class="option">
+          <label>
+            <p class="option__ttl">Enabled GitLab Sites</p>
+            <p>Please fill GitLab site's hostname to text area below. Delimit with newline or comma to specify multiple hostnames.</p>
+            <textarea id="enabledGitLabSites" class="option__textarea" placeholder="gitlab.com&#13;gitlab.example.com"></textarea>
+          </label>
+          <small>No schema (http:// or https://) or path following hostname needed.</small>
+        </div>
+      </div>
+      <button class="button" type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
