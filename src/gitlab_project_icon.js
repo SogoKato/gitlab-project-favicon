@@ -16,7 +16,7 @@
             return;
         }
         const favicon = document.querySelector("link#favicon[rel~='icon']");
-        const img = document.querySelector(".layout-page .shortcuts-project img.avatar");
+        const img = document.querySelector("*[data-qa-selector='sidebar_menu_link'] img.avatar");
         if (favicon === null || img === null) return;
         favicon.href = img.src;
     };
