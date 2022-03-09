@@ -16,7 +16,7 @@ function restoreOptions() {
   }
 
   function onError(error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 
   if (window.browser) {

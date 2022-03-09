@@ -12,7 +12,6 @@
 
     const changeFaviconToProjectLogoIfEnabled = (hostnames) => {
         if (!hostnames.includes(document.location.hostname)) {
-            console.log(hostnames);
             return;
         }
         const favicon = document.querySelector("link#favicon[rel~='icon']");
