@@ -10,8 +10,13 @@
     const changeFaviconToProjectLogo = () => {
         const favicon = document.querySelector("link#favicon[rel~='icon']");
         const img = document.querySelector("*[data-qa-selector='sidebar_menu_link'] img.avatar");
-        if (favicon === null || img === null) return;
-        favicon.href = img.src;
+        const imgV16 = document.querySelector("*[data-qa-selector='context_switcher'] img.gl-avatar");
+        if (favicon === null) return;
+        if (img) {
+          favicon.href = img.src;
+        } else if (imgV16) {
+          favicon.href = imgV16.src;
+        }
     };
 
     const changeFaviconToProjectLogoIfEnabled = (hostnames) => {

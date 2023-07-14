@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "GitLab-Project-Favicon",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.",
   "icons": {
     "64": "icons/gitlab-project-favicon-64.png",
