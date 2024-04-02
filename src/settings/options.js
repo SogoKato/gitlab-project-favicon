@@ -1,30 +1,23 @@
-function saveOptions(e) {
+async function saveOptions(e) {
   e.preventDefault();
   const enabledGitLabSites = document.querySelector("#enabledGitLabSites").value.replace("\n", ",");
+  const enableChangeFavicon = document.querySelector("#enableChangeFavicon").value;
   const browser = window.browser ? window.browser : window.chrome;
-  browser.storage.sync.set({
-    enabledGitLabSites: enabledGitLabSites,
+  await browser.storage.sync.set({
+    enabledGitLabSites,
+    enableChangeFavicon,
   });
   document.getElementById("saveBtn").innerText = "Saved!"
   setTimeout(() => { document.getElementById("saveBtn").innerText = "Save" }, 3000);
 }
 
-function restoreOptions() {
-
-  function setCurrentChoice(result) {
-    document.querySelector("#enabledGitLabSites").value = result.enabledGitLabSites.replace(",", "\n");
+async function restoreOptions() {
+  const browser = window.browser ? window.browser : window.chrome;
+  const settings = await browser.storage.sync.get(null);
+  if (typeof settings.enabledGitLabSites === "string") {
+    document.querySelector("#enabledGitLabSites").value = settings.enabledGitLabSites.replace(",", "\n");
   }
-
-  function onError(error) {
-    console.error(`Error: ${error}`);
-  }
-
-  if (window.browser) {
-    const getting = browser.storage.sync.get("enabledGitLabSites");
-    getting.then(setCurrentChoice, onError);
-  } else {
-    chrome.storage.sync.get(["enabledGitLabSites"], setCurrentChoice);
-  }
+  document.querySelector("#enableChangeFavicon").value = settings.enableChangeFavicon !== "no" ? "yes" : "no";
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);

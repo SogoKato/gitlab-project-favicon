@@ -1,29 +1,50 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
   <meta charset="utf-8">
 </head>
-
 <body>
-
   <style>
+    body {
+      background: #f6f3fe;
+      height: auto;
+      width: 360px;
+    }
+    .options {
+      margin-bottom: 64px;
+      padding: 5px 20px;
+    }
     .option {
       margin: 20px 0;
     }
-
     .option__ttl {
       font-size: large;
       font-weight: bold;
     }
-
-    .option__textarea {
+    .option__textarea,
+    .option__select {
+      background: #fff;
+      border: #000 1px solid;
+      border-radius: 5px;
+      outline: none;
+      padding: 5px;
       width: 100%;
     }
-
+    .option__textarea {
+      resize: vertical;
+    }
+    .footer {
+      align-items: center;
+      bottom: 0;
+      display: flex;
+      height: 64px;
+      justify-content: center;
+      left: 0;
+      position: fixed;
+      width: 100%;
+    }
     .button {
-      background: #fca326;
+      background: #7759c2;
       border: none;
       border-radius: 10px;
       color: #fff;
@@ -32,30 +53,38 @@
       text-align: center;
       width: 5em;
     }
-
     .button:hover {
-      background: #fc6d27;
+      background: #6341b7;
     }
   </style>
-
   <form>
-    <div>
+    <div class="options">
       <div class="option">
         <label>
           <p class="option__ttl">Enabled GitLab Sites</p>
-          <p>Please fill GitLab site's hostname to text area below. Delimit with newline or comma to specify multiple
+          <p>Please fill GitLab sites' hostname to text area below. Delimit with newline or comma to specify multiple
             hostnames.</p>
           <textarea id="enabledGitLabSites" class="option__textarea"
             placeholder="gitlab.com&#13;gitlab.example.com"></textarea>
         </label>
         <small>No schema (http:// or https://) or path following hostname needed.</small>
       </div>
+      <div class="option">
+        <label>
+          <p class="option__ttl">Change the GitLab favicon to a project icon</p>
+          <p>If enabled, this extension will replace the GitLab's default favicon with an icon of the project, group and
+            user of the current page on the all enabled GitLab sites.</p>
+          <select id="enableChangeFavicon" class="option__select">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+      </div>
     </div>
-    <button id="saveBtn" class="button" type="submit">Save</button>
+    <div class="footer">
+      <button id="saveBtn" class="button" type="submit">Save</button>
+    </div>
   </form>
-
   <script src="options.js"></script>
-
 </body>
-
 </html>
