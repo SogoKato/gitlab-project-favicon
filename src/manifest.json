@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "GitLab-Project-Favicon",
-  "version": "1.1.2",
-  "description": "Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.",
+  "name": "Tanuki Utilities",
+  "version": "2.0.0",
+  "description": "Provide useful utilities for GitLab users.",
   "icons": {
-    "64": "icons/gitlab-project-favicon-64.png",
-    "128": "icons/gitlab-project-favicon-128.png"
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
   },
   "content_scripts": [
     {
@@ -13,12 +13,12 @@
         "*://*/*"
       ],
       "js": [
-        "gitlab_project_icon.js"
+        "tanuki_utilities.js"
       ]
     }
   ],
-  "options_ui": {
-    "page": "settings/options.html"
+  "browser_action": {
+    "default_popup": "settings/options.html"
   },
   "permissions": [
     "storage"

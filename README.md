@@ -1,12 +1,12 @@
-# gitlab-project-favicon
+# tanuki-utilities (formerly gitlab-project-favicon)
 
 ![icon](src/icons/gitlab-project-favicon-128.png)
 
-Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.
+## Features
 
-![Firefox](images/screenshot_firefox_overview.png)
-
-![Chrome](images/screenshot_chrome_overview.png)
+* **Change the GitLab favicon to a project icon**; you can easily distinguish many GitLab tabs.  
+  ![Firefox](images/screenshot_firefox_overview.png)  
+  ![Chrome](images/screenshot_chrome_overview.png)
 
 ## Getting started
 
