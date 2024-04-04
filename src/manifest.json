@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Tanuki Utilities",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Provide useful utilities for GitLab users.",
   "icons": {
     "64": "icons/icon-64.png",

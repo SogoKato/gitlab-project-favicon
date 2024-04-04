@@ -39,7 +39,7 @@
     if (!/^.+\/-\/(issues|merge_requests)\/\d+.*$/.test(document.location.pathname)) return;
     if (document.querySelector(".js-copy-reference") === null) return;
     const button = document.createElement("button");
-    button.className = "btn btn-default btn-sm gl-button";
+    button.className = "btn btn-default btn-sm gl-button gl-ml-3";  // gl-ml-3 can be removed from 16.10 or 16.11.
     const buttonText = document.createElement("span");
     buttonText.innerText = "Copy reference";
     buttonText.className = "gl-button-text";
