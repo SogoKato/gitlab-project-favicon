@@ -1,26 +1,36 @@
-# gitlab-project-favicon
+# tanuki-utilities (formerly gitlab-project-favicon)
 
 ![icon](src/icons/gitlab-project-favicon-128.png)
 
-Dynamically change GitLab favicons to project logos to distinguish many GitLab tabs easily.
+## Features
 
-![Firefox](images/screenshot_firefox_overview.png)
-
-![Chrome](images/screenshot_chrome_overview.png)
+* **Change the GitLab favicon to a project icon**; you can easily distinguish many GitLab tabs.  
+  ![Firefox](images/screenshot_firefox_overview.png)  
+  ![Chrome](images/screenshot_chrome_overview.png)
+* **Add "Copy reference" button on top bar**; the button is always shown for your easy access.  
+  ![Firefox](images/screenshot_firefox_copy_reference.png)  
+  ![Chrome](images/screenshot_chrome_copy_reference.png)
 
 ## Getting started
 
-### On Firefox
+Install extension from the store.
 
-1. Install extension from AMO: https://addons.mozilla.org/firefox/addon/gitlab-project-favicon/
-2. This extension tries to change favicons in the **all** sites by default. You can specify which GitLab site (e.g. gitlab.com or your self-hosted site) you would like to change favicons. Go to the extension options page in [about:addons](about:addons) to set up. If you set any values here, then the extension tries to change favicons only in the specified sites.
-   ![Firefox](images/screenshot_firefox_settings.png)
+* Firefox: https://addons.mozilla.org/firefox/addon/gitlab-project-favicon/
+* Chrome: https://chrome.google.com/webstore/detail/gitlab-project-favicon/bakcfpilmcemknpdfdakmfnfikedmodh
 
-### On Chrome
+## Preferences
 
-1. Install extension from Chrome Web Store: https://chrome.google.com/webstore/detail/gitlab-project-favicon/bakcfpilmcemknpdfdakmfnfikedmodh
-1. This extension tries to change favicons in the **all** sites by default. You can specify which GitLab site (e.g. gitlab.com or your self-hosted site) you would like to change favicons. Go to the extension options page in [chrome://extensions](chrome://extensions) to set up. If you set any values here, then the extension tries to change favicons only in the specified sites.
-   ![Chrome](images/screenshot_chrome_settings.png)
+#### Enabled GitLab Sites
+
+This extension tries to change favicons in the **all** sites by default. You can specify which GitLab site (e.g. gitlab.com or your self-hosted site) you would like to change favicons.
+
+#### Change the GitLab favicon to a project icon
+
+Yes/No (defaults to Yes)
+
+#### Add "Copy reference" button on top bar
+
+Yes/No (defaults to No)
 
 ## Acknowledgements
 
