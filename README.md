@@ -1,6 +1,6 @@
 # tanuki-utilities (formerly gitlab-project-favicon)
 
-![icon](src/icons/gitlab-project-favicon-128.png)
+![icon](src/icons/icon-128.png)
 
 ## Features
 
