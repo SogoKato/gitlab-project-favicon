@@ -1,3 +1,2 @@
-*.zip
-tmp-chrome
+dist
 .DS_Store

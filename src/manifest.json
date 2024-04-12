@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Tanuki Utilities",
   "version": "2.1.1",
   "description": "Provide useful utilities for GitLab users.",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "settings/options.html"
   },
   "permissions": [
