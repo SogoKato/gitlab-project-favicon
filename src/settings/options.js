@@ -3,8 +3,8 @@ async function saveOptions(e) {
   const enabledGitLabSites = document.querySelector("#enabledGitLabSites").value.replace("\n", ",");
   const enableChangeFavicon = document.querySelector("#enableChangeFavicon").value;
   const enableCopyReference = document.querySelector("#enableCopyReference").value;
-  const browser = window.browser ? window.browser : window.chrome;
-  await browser.storage.sync.set({
+  const webext = chrome ? chrome : browser;
+  await webext.storage.sync.set({
     enabledGitLabSites,
     enableChangeFavicon,
     enableCopyReference,
@@ -14,8 +14,8 @@ async function saveOptions(e) {
 }
 
 async function restoreOptions() {
-  const browser = window.browser ? window.browser : window.chrome;
-  const settings = await browser.storage.sync.get(null);
+  const webext = chrome ? chrome : browser;
+  const settings = await webext.storage.sync.get(null);
   if (typeof settings.enabledGitLabSites === "string") {
     document.querySelector("#enabledGitLabSites").value = settings.enabledGitLabSites.replace(",", "\n");
   }

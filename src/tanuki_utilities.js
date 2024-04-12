@@ -2,14 +2,6 @@
   if (window.hasRun) return;
   window.hasRun = true;
 
-  const getWebExtension = () => {
-    try {
-      return browser;
-    } catch {
-      return chrome;
-    }
-  }
-
   const isEnabledSite = (settings) => {
     // If not defined, it is enabled by default.
     if (!settings.enabledGitLabSites) return true;
@@ -53,7 +45,7 @@
     breadcrumbs.appendChild(button);
   };
 
-  const webext = getWebExtension();
+  const webext = chrome ? chrome : browser;
   const settings = await webext.storage.sync.get(null);
   if (!isEnabledSite(settings)) return;
   // Unless explicit denial, it is enabled by default.
