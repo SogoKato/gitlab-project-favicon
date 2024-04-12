@@ -29,13 +29,10 @@
 
   const addCopyReferenceButton = () => {
     if (!/^.+\/-\/(issues|merge_requests)\/\d+.*$/.test(document.location.pathname)) return;
-    if (document.querySelector(".js-copy-reference") === null) return;
-    const button = document.createElement("button");
+    const button = document.querySelector(".js-copy-reference > button");
+    if (button === null) return;
     button.className = "btn btn-default btn-sm gl-button gl-ml-3";  // gl-ml-3 can be removed from 16.10 or 16.11.
-    const buttonText = document.createElement("span");
-    buttonText.innerText = "Copy reference";
-    buttonText.className = "gl-button-text";
-    button.appendChild(buttonText);
+    button.childNodes[0].className = "gl-button-text";
     const breadcrumbs = document.querySelector(".top-bar-container nav.breadcrumbs.gl-breadcrumbs");
     if (breadcrumbs === null) return;
     const copy = () => {
