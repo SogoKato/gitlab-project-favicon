@@ -27,13 +27,13 @@
     }
   };
 
-  const addCopyReferenceButton = () => {
+  const moveCopyReferenceButton = () => {
     if (!/^.+\/-\/(issues|merge_requests)\/\d+.*$/.test(document.location.pathname)) return;
     const button = document.querySelector(".js-copy-reference > button");
     if (button === null) return;
     button.className = "btn btn-default btn-sm gl-button gl-ml-3";  // gl-ml-3 can be removed from 16.10 or 16.11.
     button.childNodes[0].className = "gl-button-text";
-    const breadcrumbs = document.querySelector(".top-bar-container nav.breadcrumbs.gl-breadcrumbs");
+    const breadcrumbs = document.querySelector(".top-bar-container nav.gl-breadcrumbs");
     if (breadcrumbs === null) return;
     const copy = () => {
       document.querySelector(".js-copy-reference").click();
@@ -51,6 +51,6 @@
   }
   // Unless explicit acceptance, it is disabled by default.
   if (settings.enableCopyReference === "yes") {
-    addCopyReferenceButton();
+    moveCopyReferenceButton();
   }
 })();

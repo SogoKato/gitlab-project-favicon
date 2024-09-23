@@ -7,7 +7,7 @@
 * **Change the GitLab favicon to a project icon**; you can easily distinguish many GitLab tabs.  
   ![Firefox](images/screenshot_firefox_overview.png)  
   ![Chrome](images/screenshot_chrome_overview.png)
-* **Add "Copy reference" button on top bar**; the button is always shown for your easy access.  
+* **Move "Copy reference" button on top bar**; the button is always shown for your easy access.  
   ![Firefox](images/screenshot_firefox_copy_reference.png)  
   ![Chrome](images/screenshot_chrome_copy_reference.png)
 
@@ -28,7 +28,7 @@ This extension tries to change favicons in the **all** sites by default. You can
 
 Yes/No (defaults to Yes)
 
-#### Add "Copy reference" button on top bar
+#### Move "Copy reference" button on top bar
 
 Yes/No (defaults to No)
 
